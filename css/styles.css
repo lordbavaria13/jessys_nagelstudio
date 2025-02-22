@@ -1,0 +1,341 @@
+@font-face {
+    font-family: 'Tangerine';
+    src: url("../fonts/Tangerine/Tangerine-Bold.ttf");
+    font-weight: bold;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 730px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero {
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .about #div-rechts{
+        padding-bottom: 50px;
+    }
+
+    #column {
+        display: flex;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    .offers {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .offers h2 {
+
+        padding-top: 20px;
+    }
+
+    .offers #offers-flex{
+        flex-direction: column !important;
+        padding-bottom: 50px;
+    }
+
+    .neukunde {
+        margin-top: -170px !important;
+
+    }
+
+    .contact #contact-row {
+        display: flex;
+        flex-direction: column !important;
+        gap: 20px;
+    }
+
+    footer {
+        gap: 10px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin-right: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 10px white;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo p {
+    font-size: 15px;
+}
+.logo h2{
+    font-family: 'Tangerine', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+nav {
+
+    padding-right: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.hero {
+    position: relative;
+    background: url('../image/hero_background.jpeg') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Erbt das Hintergrundbild der .hero */
+    filter:
+            brightness(1.2) /* Helleres Bild für den Silber-Effekt */
+            grayscale(0.5) /* Fügt ein leicht graues Aussehen hinzu */
+            blur(5px); /* Unschärfe */
+    z-index: -1; /* Setzt das Pseudo-Element hinter den Inhalt */
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero .content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+.hero h1 {
+    font-size: 32px;
+}
+.hero p {
+    font-size: 18px;
+}
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #d6a2e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.about {
+    padding: 50px;
+    background: white;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+}
+
+.about #column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.about #div-links {
+    flex:2;
+
+}
+
+.about #div-rechts {
+    flex:1;
+
+}
+
+.circle-image {
+
+    width: 150px; /* Passe die Größe nach Bedarf an */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Stellt sicher, dass das Bild richtig skaliert wird */
+    /*border: 3px solid #d6a2e8; /* Optional: Rahmen um das Bild */
+}
+
+.offers {
+    padding: 100px;
+    background: #D9A7A7;
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    color: white;
+
+}
+
+
+
+.offers #offers-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+
+.offers .offer-detail {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Sorgt dafür, dass der Inhalt gleichmäßig verteilt wird */
+    align-items: center; /* Zentriert den Inhalt horizontal */
+}
+
+.offers .button {
+    display: inline-block;
+    margin-top: auto;
+
+    padding: 10px 20px;
+    background: #d6a2e8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.neukunde {
+
+    padding: 100px 0; /* Ändere das Padding von oben und unten */
+    background: white; /* Fallback-Farbe für den Container */
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); /* Entfernt unnötigen Rand */
+    align-items: center;
+    position: relative; /* Damit das Pseudo-Element positioniert werden kann */
+    overflow: hidden; /* Verhindert, dass d*/
+    margin-top: -80px; /* Verschiebt die Sektion leicht nach oben */
+    margin-bottom: -60px; /* Verschiebt die Sektion leicht nach unten */
+
+}
+
+
+
+.neukunde::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: url('../image/nagel_bild3.jpeg') no-repeat center center/cover; /* Hintergrundbild */
+    filter:
+            brightness(1.2) /* Helleres Bild */
+            grayscale(0.6) /* Grautöne hinzufügen */
+            blur(5px); /* Unschärfe hinzufügen */
+    z-index: -1; /* Setzt das Pseudo-Element hinter den Inhalt */
+}
+
+
+
+
+.neukunde #neukunden-karte {
+    background-color: white;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.contact {
+    padding: 100px;
+    background: white;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    align-items: center;
+}
+
+.contact #contact-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer {
+    padding: 50px;
+    background: purple;
+    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 100%);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer p {
+    align-self: flex-end;
+    color: white;
+}
+
+footer #links {
+    align-self: flex-start;
+    text-align: left;
+    color: white;
+    width: 100%;
+}
+
+footer #links a {
+    color: white;
+}
+
+footer #social-media {
+    align-self: center;
+
+}
+
+footer #social-media img {
+    color: white;
+}
