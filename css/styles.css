@@ -76,6 +76,11 @@ html {
         padding-right: 10px;
     }
 
+    .about {
+        padding-top: 100px !important;
+        height: 600px;
+    }
+
     .about #div-rechts{
         padding-bottom: 50px;
     }
@@ -185,6 +190,12 @@ nav ul li a {
     color: black;
     font-size: 18px;
 }
+
+nav ul li a:hover{
+    font-weight: bold;
+    color: #d6a2e8;
+}
+
 .hero {
     position: relative;
     background: url('../image/hero_background.jpeg') no-repeat center center/cover;
